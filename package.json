@@ -1,0 +1,24 @@
+{
+  "name": "cadna-backend",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:auth": "tsx watch apps/auth-service/src/index.ts",
+    "dev:gateway": "tsx watch apps/api-gateway/src/index.ts",
+    "db:migrate": "tsx scripts/db-migrate.ts"
+  },
+  "devDependencies": {
+    "pino-pretty": "^13.2.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8"
+  }
+}
